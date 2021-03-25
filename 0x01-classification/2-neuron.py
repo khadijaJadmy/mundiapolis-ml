@@ -30,4 +30,4 @@ class Neuron:
             fp = np.matmul(self.W, X)+self.b
             fsig = 1/(1+np.exp(-1*fp))
             slef.__A = fsig
-            return self
+            return self.__A
