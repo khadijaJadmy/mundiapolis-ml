@@ -16,8 +16,8 @@ class NeuralNetwork:
         if nodes < 1:
             raise ValueError("nodes must be a positive integer")
 
-        self.__W1 = np.random.randn(nx).reshape(1, nx)
-        self.__b1 = 0
+        self.__W1 = np.random.randn(nodes, nx)
+        self.__b1 = np.zeros((nodes, 1))
         self.__A1 = 0
         self.__W2 = np.random.randn(nx).reshape(1, nx)
         self.__b2 = 0
@@ -46,5 +46,3 @@ class NeuralNetwork:
         @property
         def W2(self):
             return self.__W2
-
-        
