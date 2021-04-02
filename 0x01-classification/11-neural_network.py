@@ -53,9 +53,10 @@ class NeuralNetwork:
            self.__A1=1/(1+np.exp(-(X*self.__W1+self.__b1)))
            self.__A2=1/(1+np.exp(-(X*self.__W2+self.__b2)))
 
-           return __A1,__A2 
+           return self.__A1,self.__A2 
         
         def cost(self, Y, A):
+            """"""
             n=A.shape[1]
             logLoss=-(1/n)*sum(Y*log(A)+(1-Y)*log(1.0000001-A))
 
